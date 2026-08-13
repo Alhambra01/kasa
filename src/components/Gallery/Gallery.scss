@@ -1,0 +1,25 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(250px, 40vw, 340px), 1fr));
+  gap: clamp(10px, 3vw, 30px);
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-top:4%;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    background-color: white;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    margin-left:4%;
+    margin-right:4%;
+  }
+}

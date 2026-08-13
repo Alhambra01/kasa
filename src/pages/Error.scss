@@ -1,0 +1,32 @@
+.error {
+  text-align: center;
+  color: #ff6060;
+  padding: 80px 20px;
+}
+
+.error__code {
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.error__message {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin: 20px 0 60px;
+}
+
+.error__link {
+  color: #ff6060;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .error__code {
+    font-size: 6rem;
+  }
+
+  .error__message {
+    font-size: 1.2rem;
+  }
+}

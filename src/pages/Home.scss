@@ -1,0 +1,39 @@
+.home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home .banner {
+  width: 100%;
+  height: clamp(160px, 30vw, 220px);
+  border-radius: clamp(10px, 3vw, 25px);
+  overflow: hidden;
+  margin-bottom: clamp(20px, 5vw, 40px);   /* espace banner → cards */
+}
+
+
+.home__cards {
+  width: 100%;
+  max-width: 1240px;                     /* largeur Figma desktop */
+  padding: 0 clamp(10px, 4vw, 40px);     /* padding latéral responsive */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: clamp(20px, 3vw, 40px);           /* espace entre les cards */
+}
+
+@media (max-width: 480px) {
+
+  .banner.banner--home {
+    width: 92%;                      /* banner plus petite */
+  }
+  .banner.banner--home img {
+    border-radius: 10px;
+  }
+  .home__cards {
+    grid-template-columns: 1fr;          /* une seule colonne */
+    gap: 20px;                           /* espace entre chaque card */
+    padding: 0 10px;                     /* padding latéral mobile */
+  }
+}
